@@ -34,4 +34,6 @@ Toва, което оставих да не може да се комбинир�
 - `campervans?price[min]=20000&sort=created`
 - `campervans?near=33.64,-117.93&price[min]=9000&&sort=updated`
 
+**Link to the heroku server -> https://blooming-depths-53374.herokuapp.com/**
+
 **_Ivan Avramov - Junior Backend Developer - Softavail_**
