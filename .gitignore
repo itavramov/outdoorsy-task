@@ -12,6 +12,7 @@
 .env
 .env.test
 /database
+.DS_Store
 ###> symfony/phpunit-bridge ###
 .phpunit
 .phpunit.result.cache

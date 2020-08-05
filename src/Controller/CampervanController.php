@@ -26,7 +26,6 @@ class CampervanController extends AbstractController
      */
     public function findCampervanById($id)
     {
-        $scope = GlobalTracer::g;
         $jsonData = $this->campervanService->findCampervanById($id);
 
         return new JsonResponse(
