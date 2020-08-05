@@ -129,9 +129,6 @@
     "monolog/monolog": {
         "version": "1.25.5"
     },
-    "nikic/php-parser": {
-        "version": "v4.7.0"
-    },
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
@@ -228,9 +225,6 @@
     "symfony/asset": {
         "version": "v4.4.11"
     },
-    "symfony/browser-kit": {
-        "version": "v4.4.11"
-    },
     "symfony/cache": {
         "version": "v4.4.11"
     },
@@ -253,23 +247,8 @@
             "config/bootstrap.php"
         ]
     },
-    "symfony/css-selector": {
-        "version": "v4.4.11"
-    },
     "symfony/debug": {
         "version": "v4.4.11"
-    },
-    "symfony/debug-bundle": {
-        "version": "4.1",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "4.1",
-            "ref": "f8863cbad2f2e58c4b65fa1eac892ab189971bea"
-        },
-        "files": [
-            "config/packages/dev/debug.yaml"
-        ]
     },
     "symfony/debug-pack": {
         "version": "v1.0.8"
@@ -278,9 +257,6 @@
         "version": "v4.4.11"
     },
     "symfony/doctrine-bridge": {
-        "version": "v4.4.11"
-    },
-    "symfony/dom-crawler": {
         "version": "v4.4.11"
     },
     "symfony/dotenv": {
@@ -369,15 +345,6 @@
             "config/packages/mailer.yaml"
         ]
     },
-    "symfony/maker-bundle": {
-        "version": "1.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "1.0",
-            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
-        }
-    },
     "symfony/mime": {
         "version": "v4.4.11"
     },
@@ -404,21 +371,6 @@
     },
     "symfony/orm-pack": {
         "version": "v2.0.0"
-    },
-    "symfony/phpunit-bridge": {
-        "version": "4.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "4.3",
-            "ref": "6d0e35f749d5f4bfe1f011762875275cd3f9874f"
-        },
-        "files": [
-            ".env.test",
-            "bin/phpunit",
-            "phpunit.xml.dist",
-            "tests/bootstrap.php"
-        ]
     },
     "symfony/polyfill-intl-icu": {
         "version": "v1.18.0"
@@ -566,20 +518,6 @@
     },
     "symfony/web-link": {
         "version": "v4.4.11"
-    },
-    "symfony/web-profiler-bundle": {
-        "version": "3.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "3.3",
-            "ref": "6bdfa1a95f6b2e677ab985cd1af2eae35d62e0f6"
-        },
-        "files": [
-            "config/packages/dev/web_profiler.yaml",
-            "config/packages/test/web_profiler.yaml",
-            "config/routes/dev/web_profiler.yaml"
-        ]
     },
     "symfony/yaml": {
         "version": "v4.4.11"
