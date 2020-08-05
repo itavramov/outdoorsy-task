@@ -30,7 +30,8 @@ class IndexController extends AbstractController
     public function index(
         Request $request
     ) {
-        dump('Само Левски!');die;
+
+        return $this->render('base.html.twig');
     }
 
 }
