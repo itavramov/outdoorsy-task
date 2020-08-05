@@ -1,11 +1,23 @@
 # Outdoorsy Backend Coding Challenge
 
-Thanks for applying for a backend role at Outdoorsy. We've put together this code challenge, which should take around 4-6 hours to complete.
+
+
+Първото интересно нещо в задачата беше това, че един route трябва да връща огромен набор от разнообразна информация в зависимост от get параметрите. В задачката нямаше условие да могат да се комбинират всички тези параметри, но пък това може би ми се стори най-интересното , да намеря начин всичко да може да се комбинира в зависимост от нуждите на апп-а. 
+
+Второто интересно нещо беше заявката, която трябва да намери в радиус от 100 мили кемпери под наем. Първоначално бях направил  логиката да взимам всичките записи, да ги обходя и да намеря тези , които отговарят на изискванията, но като ресърчнах малко повече видях, че postgres - a има набор от функции и цялата логика от php-то я изместих в заявката. 
+
+Sentry и Datadog бяха изцяло нови за мен работи и ми се сториха готини тулове, които наистина биха били много полезни в един огромен апп за мониторинг на перформенс-а. 
+
+Интересен компонент от задачата беше и това да успея да си конфигурирам виртуалката да работи с postgres.  Друго нещо, с което за първи път се сблъсках беше heroku. Деплоя на него ми изяде адски много време , може би толкова , колкот ми отне да си конфигурам виртуалката. 
+
+В условието на задачата нямаше описано някъде изришно да могат да се комбинират параметрите и ще напиша няколко примерни рутове, които ги направих да работят въпреки, че не бях част от таска.
+
+Toва, което оставих да не може да се комбинира е заявката с id-тата, защо след като изкоментирахме тази част с Илия, стигнахме до извода, че когато някой ще прави заявка за конкретни ид-та, той вече знае какво иска да вземе и е излишно да се добавят допълнително сортировки.
+
+В задачата има и опцията да се сортира, като в условието примерът е с цената, но направих така, че да може да се сортира по ид, кога е създаден записа, кога е ъпдейтнат и цената.
 
 ## Functionality
-The task is to develop a campervan JSON API that returns a list of campervans that can be filtered, sorted, and paginated. We have included files to create a database of campervans and campervan images. There is a GOlang project in this repo ready to go, or you can use whatever backend technology you are comfortable with. Finish by pushing your code to Github and deploying both the API to Heroku or another hosting environment.
 
-Your application should respond to the following URLs.
 
 - `campervans`
 - `campervans?price[min]=9000&price[max]=75000`
@@ -14,35 +26,12 @@ Your application should respond to the following URLs.
 - `campervans?near=33.64,-117.93` // within 100 miles
 - `campervans?sort=price`
 - `campervans/<CAMPER_VAN_ID>`
+- `campervans?price[min]=9000&price[max]=75000&page[limit]=3&page[offset]=6&sort=price`
+- `campervans?sort=id`
+- `campervans?sort=created`
+- `campervans?sort=updated`
+- `campervans?near=33.64,-117.93&price[min]=9000&price[max]=75000&page[limit]=3&page[offset]=6&sort=updated`
+- `campervans?price[min]=20000&sort=created`
+- `campervans?near=33.64,-117.93&price[min]=9000&&sort=updated`
 
-
-## What we are looking for
-1. All functionality implemented and working correctly
-2. Add tests
-3. Proper architecture of the codebase
-	a. Decoupled components providing behaviors
-	b. Components composed to aggregate behaviors
-	c. Clean, maintainable code with appropriate comments
-4. Well formed SQL
-	a. Optimized, efficient queries
-	b. Proper indexing
-	c. Minimal queries for only the data you need
-	d. Well formatted and maintainable
-5. Proper error handling
-	a. Surfacing errors to the user in a useful way
-	b. Automatic retries on the backend where applicable (SQL Faults, etc)
-6. Error reporting using Sentry
-7. Tracing using OpenTracing/Datadog
-8. Optimized code
-	a. Minimal allocations
-	b. Proper data structures to minimize execution time
-	c. Efficient algorithms to minimize execution time
-
-### Notes
-- Please make frequent, and descriptive git commits.
-- Use third-party libraries or not; your choice.
-- The functionality of the project matches the description above
-- An ability to think through all potential states
-
-
-Thank you, and please reach out if you have any questions!
+**_Ivan Avramov - Junior Backend Developer - Softavail_**
