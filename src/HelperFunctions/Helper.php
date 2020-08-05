@@ -6,7 +6,12 @@ namespace App\HelperFunctions;
 
 class Helper
 {
-    function getDistance($latitude1, $longitude1, $latitude2, $longitude2) {
+    function getDistance(
+        $latitude1,
+        $longitude1,
+        $latitude2,
+        $longitude2
+    ) {
         $earthRadius = 6371;
 
         $dLat = deg2rad($latitude2 - $latitude1);

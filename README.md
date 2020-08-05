@@ -1,20 +1,18 @@
 # Outdoorsy Backend Coding Challenge
 
+The first interesting part of the task was that one specific route can accept many different GET params and return a huge set of diverse information. There was no condition in the task , that says developer must be able to combine all these parameters, but now this may seem to me the most challenging thing - to find a way to be able to combine every GET param. 
 
+The second interesting thing was finding the best way to handle this route - `campervans?near=33.64,-117.93`. In the beginning I wrote all of the logic to be handled by single Helper object with method inside him and it was working fine. But then after I made some extra research I find a way to handle all of this in the database query. So I moved the logic from PHP to the Postgresql.
 
-Първото интересно нещо в задачата беше това, че един route трябва да връща огромен набор от разнообразна информация в зависимост от get параметрите. В задачката нямаше условие да могат да се комбинират всички тези параметри, но пък това може би ми се стори най-интересното , да намеря начин всичко да може да се комбинира в зависимост от нуждите на апп-а. 
+Sentry and Datadog were something totally new for me and I found this kind of tools great, because they can be very useful in a huge app for monitoring the performance.
+ 
+ Maybe interesting component of the task was to be able to configure my own VM to work with postgres too. I used for local env VM builded with VAGRANT and configurated with Ansible, but it was set to work only with MySQL and MongoDB.
 
-Второто интересно нещо беше заявката, която трябва да намери в радиус от 100 мили кемпери под наем. Първоначално бях направил  логиката да взимам всичките записи, да ги обходя и да намеря тези , които отговарят на изискванията, но като ресърчнах малко повече видях, че postgres - a има набор от функции и цялата логика от php-то я изместих в заявката. 
+ Another thing I encountered for first time was heroku. The deployment of the project  took me a lot of time, maybe almost the same as configurating the VM for Postgres...
 
-Sentry и Datadog бяха изцяло нови за мен работи и ми се сториха готини тулове, които наистина биха били много полезни в един огромен апп за мониторинг на перформенс-а. 
+There was no condition in the the READ.ME file to be able to combine the parameters and I decided to write some example routes. What remains that cannot be combined is the route campervans?ids=2000,51155,54318. After I spoke with member of our team, we came to the conclusion, that if someone will ask for a request only for specific ids, he already knows what he wants to get and it is unnecessary to offer additional sorting. 
 
-Интересен компонент от задачата беше и това да успея да си конфигурирам виртуалката да работи с postgres.  Друго нещо, с което за първи път се сблъсках беше heroku. Деплоя на него ми изяде адски много време , може би толкова , колкот ми отне да си конфигурам виртуалката. 
-
-В условието на задачата нямаше описано някъде изришно да могат да се комбинират параметрите и ще напиша няколко примерни рутове, които ги направих да работят въпреки, че не бях част от таска.
-
-Toва, което оставих да не може да се комбинира е заявката с id-тата, защо след като изкоментирахме тази част с Илия, стигнахме до извода, че когато някой ще прави заявка за конкретни ид-та, той вече знае какво иска да вземе и е излишно да се добавят допълнително сортировки.
-
-В задачата има и опцията да се сортира, като в условието примерът е с цената, но направих така, че да може да се сортира по ид, кога е създаден записа, кога е ъпдейтнат и цената.
+In the task there is also an option to sort by price. I added the feature to sort the records by id,created and updated field too. You can find all the example routes below.
 
 ## Functionality
 

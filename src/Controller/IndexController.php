@@ -30,7 +30,6 @@ class IndexController extends AbstractController
     public function index(
         Request $request
     ) {
-
         return $this->render('base.html.twig');
     }
 

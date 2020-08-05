@@ -31,7 +31,10 @@ class CampervanController extends AbstractController
         return new JsonResponse(
             $jsonData,
             200,
-            []
+            [
+                'Content-Type',
+                'application/json; charset=UTF-8'
+            ]
         );
     }
 
@@ -45,7 +48,10 @@ class CampervanController extends AbstractController
         return new JsonResponse(
             $jsonData,
             200,
-            ['Content-Type', 'application/json; charset=UTF-8']
+            [
+                'Content-Type',
+                'application/json; charset=UTF-8'
+            ]
         );
     }
 }
