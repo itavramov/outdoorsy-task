@@ -9,8 +9,6 @@
 /vendor/
 ###< symfony/framework-bundle ###
 /.idea
-.env
-.env.test
 /database
 .DS_Store
 ###> symfony/phpunit-bridge ###
